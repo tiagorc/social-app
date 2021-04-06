@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FEAC750261BF26E00C413DD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEAC74F261BF26E00C413DD /* Post.swift */; };
+		6FFEA684261C8AB8002B304F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFEA683261C8AB8002B304F /* ImageLoader.swift */; };
+		6FFEA687261C9A7C002B304F /* GridUsersImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFEA686261C9A7C002B304F /* GridUsersImageView.swift */; };
+		6FFEA68A261C9AAE002B304F /* GridUsersImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFEA689261C9AAE002B304F /* GridUsersImageViewModel.swift */; };
+		6FFEA68D261C9D84002B304F /* UserImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFEA68C261C9D84002B304F /* UserImage.swift */; };
 		EB5F4077261BCB0200437217 /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F4076261BCB0200437217 /* SocialApp.swift */; };
 		EB5F4079261BCB0200437217 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F4078261BCB0200437217 /* ContentView.swift */; };
 		EB5F407B261BCB0400437217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5F407A261BCB0400437217 /* Assets.xcassets */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6FEAC74F261BF26E00C413DD /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		6FFEA683261C8AB8002B304F /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		6FFEA686261C9A7C002B304F /* GridUsersImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridUsersImageView.swift; sourceTree = "<group>"; };
+		6FFEA689261C9AAE002B304F /* GridUsersImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridUsersImageViewModel.swift; sourceTree = "<group>"; };
+		6FFEA68C261C9D84002B304F /* UserImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImage.swift; sourceTree = "<group>"; };
 		EB5F4073261BCB0200437217 /* Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Social.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5F4076261BCB0200437217 /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		EB5F4078261BCB0200437217 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +84,8 @@
 				EB5F4090261BE28800437217 /* URLSession+Utils.swift */,
 				EB5F4093261BE37700437217 /* ObservableObject+Utils.swift */,
 				EB5F4096261BE6AE00437217 /* PostView.swift */,
+				6FFEA683261C8AB8002B304F /* ImageLoader.swift */,
+				6FFEA686261C9A7C002B304F /* GridUsersImageView.swift */,
 			);
 			path = Social;
 			sourceTree = "<group>";
@@ -90,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				EB5F4088261BCC6600437217 /* User.swift */,
+				6FFEA68C261C9D84002B304F /* UserImage.swift */,
+				6FEAC74F261BF26E00C413DD /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,6 +113,7 @@
 			children = (
 				EB5F408D261BD2DE00437217 /* UserViewModel.swift */,
 				EB5F4099261BE6BB00437217 /* PostViewModel.swift */,
+				6FFEA689261C9AAE002B304F /* GridUsersImageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -174,12 +189,17 @@
 			files = (
 				EB5F409A261BE6BB00437217 /* PostViewModel.swift in Sources */,
 				EB5F4097261BE6AE00437217 /* PostView.swift in Sources */,
+				6FFEA684261C8AB8002B304F /* ImageLoader.swift in Sources */,
+				6FFEA687261C9A7C002B304F /* GridUsersImageView.swift in Sources */,
 				EB5F4079261BCB0200437217 /* ContentView.swift in Sources */,
 				EB5F408E261BD2DE00437217 /* UserViewModel.swift in Sources */,
+				6FFEA68D261C9D84002B304F /* UserImage.swift in Sources */,
 				EB5F4077261BCB0200437217 /* SocialApp.swift in Sources */,
 				EB5F4089261BCC6600437217 /* User.swift in Sources */,
+				6FEAC750261BF26E00C413DD /* Post.swift in Sources */,
 				EB5F4091261BE28800437217 /* URLSession+Utils.swift in Sources */,
 				EB5F4094261BE37700437217 /* ObservableObject+Utils.swift in Sources */,
+				6FFEA68A261C9AAE002B304F /* GridUsersImageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

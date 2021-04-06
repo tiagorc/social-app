@@ -26,9 +26,6 @@ class UserViewModel: ObservableObject {
     }
     private var usersCancellationToken: AnyCancellable?
     
-    
-    
-    
     func newFetchUsers() {
         usersCancellationToken?.cancel()
         

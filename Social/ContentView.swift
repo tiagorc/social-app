@@ -12,6 +12,11 @@ struct ContentView: View {
     @ObservedObject
     var viewModel: UserViewModel
     
+    let url = URL(string: "https://cencup.com/wp-content/uploads/2019/07/avatar-placeholder.png")!
+    
+    @State
+    var numberOfRows = 0
+    
     var body: some View {
         NavigationView {
             Group {
@@ -20,10 +25,17 @@ struct ContentView: View {
                 }else {
                     List {
                         ForEach(viewModel.users) { user in
-                            NavigationLink(destination: PostView()) {
-                                VStack(alignment: .leading) {
-                                    Text(user.name).font(.title2)
-                                    Text(user.email).font(.subheadline)
+                            NavigationLink(destination: PostView(user: user)) {
+                                HStack {
+                                    AsyncImage(url: self.url, placeholder: {
+                                        ProgressView()
+                                            .frame(width: 40, height: 40, alignment: .center)
+                                    })
+                                    .frame(width: 40, height: 40, alignment: .center)
+                                    VStack(alignment: .leading) {
+                                        Text(user.name).font(.title2)
+                                        Text(user.email).font(.subheadline)
+                                    }
                                 }
                             }
                         }
@@ -31,8 +43,8 @@ struct ContentView: View {
                 }
              }
             .navigationTitle("Usuários")
-            .environmentObject(PostViewModel())
         }
+        .environmentObject(PostViewModel())
         .onAppear {
             viewModel.newFetchUsers()
         }
@@ -42,6 +54,13 @@ struct ContentView: View {
         return VStack {
             ProgressView()
             Text("Aguarde! Carregando..")
+        }
+    }
+    
+    private var list: some View {
+        List(0 ..< numberOfRows, id: \.self) { _ in
+            AsyncImage(url: self.url, placeholder: { Text("Carregando imagem") })
+            
         }
     }
     
